@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171002204734) do
+ActiveRecord::Schema.define(version: 20171005165616) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 20171002204734) do
     t.string "encrypted_secret_question_2_answer_iv", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "driven_at", null: false
     t.index ["snap_application_id"], name: "index_driver_applications_on_snap_application_id"
   end
 
@@ -66,6 +67,7 @@ ActiveRecord::Schema.define(version: 20171002204734) do
     t.text "page_html", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "driven_at", null: false
     t.index ["driver_application_id"], name: "index_driver_errors_on_driver_application_id"
   end
 
