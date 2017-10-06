@@ -6,7 +6,7 @@ class FindChrome
   CHROME_PATHS = [
     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
     "/opt/google/chrome/chrome",
-    "/app/.apt/opt/google/chrome/chrome",
+    ENV["GOOGLE_CHROME_BIN"],
     ENV["CHROME_PATH"],
     find_executable("chrome"),
   ].compact.freeze
